@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tbilisi Guide — Wolt Guest Recommendations</title>
+  <meta name="description" content="Curated recommendations for visiting Tbilisi — food, sightseeing, and local tips from the Wolt team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="flag-badge">🇬🇪</div>
+      <h1>Tbilisi Guide</h1>
+      <p>Curated recommendations from the Wolt team</p>
+    </div>
+  </header>
+
+  <!-- Sticky navigation -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <button class="nav-btn active" data-section="food">
+        <span class="nav-icon">🍽️</span> Food
+      </button>
+      <button class="nav-btn" data-section="sightseeing">
+        <span class="nav-icon">🏛️</span> Sightseeing
+      </button>
+      <button class="nav-btn" data-section="tips">
+        <span class="nav-icon">💡</span> Tips
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- Food Section (default) -->
+    <section id="food" class="section active">
+      <div class="section-header">
+        <h2>Where to Eat</h2>
+        <p>Hand-picked restaurants by the local Wolt team</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Meals</button>
+        <button class="filter-btn" data-filter="breakfast">🌅 Breakfast</button>
+        <button class="filter-btn" data-filter="lunch">☀️ Lunch</button>
+        <button class="filter-btn" data-filter="dinner">🌙 Dinner</button>
+      </div>
+      <div class="cards-grid" id="food-cards"></div>
+    </section>
+
+    <!-- Sightseeing Section -->
+    <section id="sightseeing" class="section">
+      <div class="section-header">
+        <h2>What to See</h2>
+        <p>Tbilisi's unmissable landmarks and hidden gems</p>
+      </div>
+      <div class="cards-grid" id="sight-cards"></div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="section">
+      <div class="section-header">
+        <h2>Essential Tips</h2>
+        <p>Everything you need to know before you go</p>
+      </div>
+      <div class="tips-grid" id="tips-content"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Made with ❤️ by the Wolt Tbilisi team</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
