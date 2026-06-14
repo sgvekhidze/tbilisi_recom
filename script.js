@@ -6,11 +6,29 @@ const foodData = [
   {
     name: "Honoré",
     description: "A charming French-inspired café with exceptional pastries, croissants, and specialty coffee. The perfect spot to start your morning in Tbilisi — elegant, relaxed, and delicious.",
-    meals: ["breakfast", "lunch"],
+    meals: ["breakfast", "brunch"],
     cuisine: "French Café",
     mapLink: "https://share.google/PyWOHu70oPqzEYgZb",
     tags: ["coffee", "pastries", "brunch"],
     emoji: "☕"
+  },
+  {
+    name: "Food Good",
+    description: "A cozy and welcoming café popular with locals for its wholesome breakfast plates and brunch spreads. Great coffee, fresh ingredients, and a relaxed atmosphere.",
+    meals: ["breakfast", "brunch"],
+    cuisine: "Café & Brunch",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Food+Good+Tbilisi",
+    tags: ["coffee", "brunch", "cozy"],
+    emoji: "🍳"
+  },
+  {
+    name: "Ska",
+    description: "A lively and popular lunch spot known for its fresh, creative dishes and vibrant atmosphere. Perfect for a mid-day break in the city.",
+    meals: ["lunch"],
+    cuisine: "Modern Café",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Ska+restaurant+Tbilisi",
+    tags: ["casual", "fresh", "popular"],
+    emoji: "🌮"
   },
   {
     name: "Rigi",
@@ -79,13 +97,22 @@ const sightseeingData = [
     duration: "1–3 hours"
   },
   {
-    name: "Holy Trinity Cathedral (Sameba)",
-    description: "Georgia's largest cathedral and a powerful symbol of the nation. The golden dome visible from across the city, with peaceful surrounding grounds and stunning architecture.",
-    category: "Landmark",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Sameba+Cathedral+Tbilisi",
-    tags: ["architecture", "spiritual", "landmark"],
-    emoji: "⛪",
-    duration: "30–60 min"
+    name: "Chronicles of Georgia",
+    description: "A monumental 35-metre stone column carved with reliefs of Georgian kings, saints, and warriors. Perched on a hill above the Tbilisi Sea reservoir — dramatic and unforgettable.",
+    category: "Monument",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Chronicles+of+Georgia+Tbilisi",
+    tags: ["monument", "views", "iconic"],
+    emoji: "🗿",
+    duration: "1 hour"
+  },
+  {
+    name: "Tbilisi Synagogue",
+    description: "One of the most beautiful synagogues in the Caucasus, located in the heart of Old Town. A testament to Tbilisi's centuries-long Jewish community and the city's multicultural heritage.",
+    category: "Religious",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Great+Synagogue+Tbilisi",
+    tags: ["historic", "culture", "architecture"],
+    emoji: "✡️",
+    duration: "30–45 min"
   },
   {
     name: "Bridge of Peace",
@@ -133,15 +160,6 @@ const sightseeingData = [
     duration: "2–3 hours"
   },
   {
-    name: "Rustaveli Avenue",
-    description: "Tbilisi's grand main boulevard lined with theatres, galleries, elegant architecture, and pavement cafés. A perfect evening stroll through the cultural heart of the city.",
-    category: "Neighborhood",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Rustaveli+Avenue+Tbilisi",
-    tags: ["walking", "culture", "shopping"],
-    emoji: "🛤️",
-    duration: "1–2 hours"
-  },
-  {
     name: "Dry Bridge Market",
     description: "Tbilisi's beloved outdoor flea market — Soviet memorabilia, vintage jewelry, oil paintings, handcrafted silverware, and unusual antiques. A treasure hunter's paradise.",
     category: "Market",
@@ -165,13 +183,13 @@ const tipsData = [
   },
   {
     emoji: "🌐",
-    title: "Language & Communication",
-    content: "Georgian (ქართული) is the official language. English is widely spoken in restaurants, hotels, and shops in central Tbilisi. Google Translate with camera mode works well for menus and signs."
+    title: "Language",
+    content: "Georgian (ქართული) is the official language. English is widely spoken in restaurants and hotels in central Tbilisi. Google Translate with camera mode works great for menus and signs."
   },
   {
     emoji: "🍷",
     title: "Georgian Wine",
-    content: "Georgia invented wine 8,000 years ago. Try amber (orange) wines made in traditional clay vessels called <strong>qvevri</strong>. Must-try varieties: <strong>Rkatsiteli</strong> (white), <strong>Saperavi</strong> (red), and <strong>Mtsvane</strong> (crisp white)."
+    content: "Georgia invented wine 8,000 years ago. Try amber (orange) wines made in traditional clay vessels called <strong>qvevri</strong>. Must-try varieties: <strong>Rkatsiteli</strong> (white), <strong>Saperavi</strong> (red), <strong>Mtsvane</strong> (crisp white)."
   },
   {
     emoji: "🥐",
@@ -181,17 +199,17 @@ const tipsData = [
   {
     emoji: "📱",
     title: "Connectivity",
-    content: "WiFi is fast and free in almost every café and restaurant. Local SIM cards are cheap and easy to get at the airport (Magti or Geocell). Excellent LTE coverage across the city."
+    content: "WiFi is fast and free in almost every café and restaurant. Local SIM cards are cheap at the airport (Magti or Geocell). Excellent LTE coverage across the entire city."
   },
   {
     emoji: "🌡️",
     title: "Weather",
-    content: "Tbilisi has hot, dry summers (28–36°C) and cool winters. The ideal seasons are <strong>spring (April–June)</strong> and <strong>autumn (September–November)</strong> — warm, clear days and beautiful foliage."
+    content: "Tbilisi has hot summers (28–36°C) and cool winters. Best seasons: <strong>spring (April–June)</strong> and <strong>autumn (September–November)</strong> — warm, clear days."
   },
   {
     emoji: "🏨",
     title: "Best Neighborhoods",
-    content: "<strong>Old Town</strong> — maximum atmosphere. <strong>Vera</strong> — quiet, bohemian, boutique feel. <strong>Vake</strong> — leafy, upscale, residential. All are within 15–20 min of the main attractions."
+    content: "<strong>Old Town</strong> — maximum atmosphere. <strong>Vera</strong> — quiet, bohemian. <strong>Vake</strong> — leafy and upscale. All are within 15–20 min of the main attractions."
   }
 ];
 
@@ -201,6 +219,7 @@ const tipsData = [
 
 const mealLabels = {
   breakfast: "🌅 Breakfast",
+  brunch: "🥂 Brunch",
   lunch: "☀️ Lunch",
   dinner: "🌙 Dinner"
 };
@@ -302,18 +321,15 @@ function renderTips() {
 //  EVENT HANDLERS
 // ========================================================
 
-// Main section tabs
 document.querySelectorAll(".nav-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-
     document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
     document.getElementById(btn.dataset.section).classList.add("active");
   });
 });
 
-// Food meal filters
 document.querySelectorAll(".filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
